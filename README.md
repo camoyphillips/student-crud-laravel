@@ -57,3 +57,25 @@ resources/views/students/	CRUD Blade templates
 app/Http/Controllers/StudentController.php
 app/Http/Requests/	
 resources/views/auth/login.blade.php
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-07 013629" src="https://github.com/user-attachments/assets/7c75afda-1511-4d72-a2dc-accd2dcc0969" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-07 013629" src="https://github.com/user-attachments/assets/0dbc7ce1-ae5e-490d-beca-fd7afc7baa7b" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-07 013629" src="https://github.com/user-attachments/assets/8e13c0b3-87ff-494a-b55e-34086aea88cc" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-07 013629" src="https://github.com/user-attachments/assets/d5c2978c-b1df-4bb3-8d03-75b58607c142" />
+
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-07 013629" src="https://github.com/user-attachments/assets/42e5fcaf-10c4-40db-9419-aa19b968aaac" />
+
+
+
+
+
+
+
+
+
