@@ -43,6 +43,12 @@ class StudentController extends Controller
         return redirect()->route('students.index')->with('success', 'Student updated successfully.');
     }
 
+    public function confirmDelete(Student $student)
+    {
+    return view('students.delete', compact('student'));
+    }
+
+
     public function destroy(Student $student): RedirectResponse
     {
         $student->delete();
