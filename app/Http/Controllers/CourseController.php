@@ -6,6 +6,8 @@ use App\Models\Course;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreCourseRequest;
 use App\Http\Requests\UpdateCourseRequest;
+use App\Models\Professor;
+
 
 class CourseController extends Controller
 {
@@ -23,7 +25,8 @@ class CourseController extends Controller
      */
     public function create()
     {
-        return view('courses.create');
+    $professors = Professor::all(); 
+    return view('courses.create', compact('professors'));
     }
 
     /**

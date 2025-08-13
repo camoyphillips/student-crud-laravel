@@ -18,6 +18,9 @@ class StoreStudentRequest extends FormRequest
             'last_name' => 'required|string|max:255',
             'email' => 'required|email|unique:students,email',
             'dob' => 'nullable|date',
+            'courses' => 'required|array',
+            'courses.*' => 'exists:courses,id',
         ];
     }
 }
+

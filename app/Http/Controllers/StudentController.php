@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use App\Models\Course;
 use App\Http\Requests\StoreStudentRequest;
 use App\Http\Requests\UpdateStudentRequest;
 use Illuminate\Http\RedirectResponse;
@@ -18,13 +19,15 @@ class StudentController extends Controller
 
     public function create(): View
     {
-        return view('students.create');
+        $courses = Course::all();
+        return view('students.create', compact('courses'));
     }
 
     public function store(StoreStudentRequest $request): RedirectResponse
     {
-        Student::create($request->validated());
-        return redirect()->route('students.index')->with('success', 'Student created successfully.');
+        $student = Student::create($request->validated());
+        $student->courses()->sync($request->input('courses', [])); 
+        return redirect()->route('students.index')->with('success', 'Student created with courses.');
     }
 
     public function show(Student $student): View
@@ -34,20 +37,21 @@ class StudentController extends Controller
 
     public function edit(Student $student): View
     {
-        return view('students.edit', compact('student'));
+        $courses = Course::all(); 
+        return view('students.edit', compact('student', 'courses'));
     }
 
     public function update(UpdateStudentRequest $request, Student $student): RedirectResponse
     {
         $student->update($request->validated());
+        $student->courses()->sync($request->input('courses', []));
         return redirect()->route('students.index')->with('success', 'Student updated successfully.');
     }
 
-    public function confirmDelete(Student $student)
+    public function confirmDelete(Student $student): View
     {
-    return view('students.delete', compact('student'));
+        return view('students.delete', compact('student'));
     }
-
 
     public function destroy(Student $student): RedirectResponse
     {

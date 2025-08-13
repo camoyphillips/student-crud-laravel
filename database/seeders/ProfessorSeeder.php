@@ -4,14 +4,24 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Professor;
+use App\Models\Course;
 
 class ProfessorSeeder extends Seeder
 {
-    /**
-     * Seed the professors table with 10 fake records.
-     */
     public function run(): void
     {
-        Professor::factory()->count(10)->create();
+        $courses = Course::all();
+
+        
+        if ($courses->count() === 0) {
+            $courses = Course::factory()->count(10)->create();
+        }
+
+        // Assigning each course a professor for the lms.
+        foreach ($courses as $course) {
+            Professor::factory()->create([
+                'course_id' => $course->id,
+            ]);
+        }
     }
 }

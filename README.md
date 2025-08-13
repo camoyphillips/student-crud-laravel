@@ -1,18 +1,58 @@
-# Laravel Student CRUD
+# Student CRUD Laravel App
 
-Laravel app that allows authenticated users to manage students with full CRUD functionality. Built using Blade views and Laravel authentication.
+A Laravel 12 application that manages students and their enrolled courses using a clean UI and custom Blade views. This CRUD project supports authentication, student data entry, and many-to-many course relationships using checkboxes.
+
+---
+
+##  Features
+
+-  Create, Read, Update, Delete (CRUD) for Students
+-  Assign multiple courses to each student using checkboxes
+-  User authentication (Login, Register, Logout)
+-  Form validation with error feedback
+-  Blade views with Bootstrap styling
+-  Pivot table for `course_student` relationship
 
 ---
 
-## Features
+## Technologies
 
-- User login
-- List, create, update, delete students
-- Input validation via `FormRequest`
-- Auth-protected routes
-- Custom login form
-
+- Laravel 12
+- PHP 8.3
+- MySQL 
+- Bootstrap 5 
 ---
+
+## Project Structure
+
+├── app/
+│ └── Http/
+│ ├── Controllers/
+│ │ └── StudentController.php
+│ └── Requests/
+│ ├── StoreStudentRequest.php
+│ └── UpdateStudentRequest.php
+│
+├── database/
+│ └── migrations/
+│ ├── create_students_table.php
+│ ├── create_courses_table.php
+│ └── create_course_student_table.php
+│
+├── resources/
+│ └── views/
+│ ├── admin.blade.php
+│ ├── students/
+│ │ ├── index.blade.php
+│ │ ├── create.blade.php 
+│ │ └── edit.blade.php
+│ └── auth/
+│ └── login.blade.php
+│
+├── routes/
+│ └── web.php 
+
+
 
 ## Installation
 
