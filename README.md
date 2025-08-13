@@ -1,6 +1,6 @@
-# Student CRUD Laravel App
+# CRUD Laravel App
 
-A Laravel 12 application that manages students and their enrolled courses using a clean UI and custom Blade views. This CRUD project supports authentication, student data entry, and many-to-many course relationships using checkboxes.
+A Laravel application that manages students and their enrolled courses using a clean UI and custom Blade views. This CRUD project supports authentication, student data entry, and many-to-many course relationships using checkboxes.
 
 ---
 
@@ -98,6 +98,7 @@ app/Http/Controllers/StudentController.php
 app/Http/Requests/	
 resources/views/auth/login.blade.php
 
+
 <img width="1920" height="1080" alt="Screenshot 2025-08-07 013629" src="https://github.com/user-attachments/assets/7c75afda-1511-4d72-a2dc-accd2dcc0969" />
 
 <img width="1920" height="1080" alt="Screenshot 2025-08-07 013654" src="https://github.com/user-attachments/assets/3f26d4ad-4ec4-4945-8ad7-da66c258651c" />
@@ -111,6 +112,14 @@ resources/views/auth/login.blade.php
 <img width="1920" height="1080" alt="Screenshot 2025-08-07 021624" src="https://github.com/user-attachments/assets/485a4d15-5081-4bbc-ba9c-08ea46f40567" />
 
 <img width="1920" height="1080" alt="Screenshot 2025-08-07 021657" src="https://github.com/user-attachments/assets/7ec7a0ae-2b4a-429f-92ac-3a1508871a04" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-13 160312" src="https://github.com/user-attachments/assets/e5b9515b-9949-41a4-a1e2-e35815036a53" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-13 160112" src="https://github.com/user-attachments/assets/021372b8-0a9b-4fbc-bb32-27a927670615" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-13 160155" src="https://github.com/user-attachments/assets/6d01a989-cec9-488c-9e2a-48be79ccb962" />
+
+<img width="1920" height="1080" alt="Screenshot 2025-08-13 160222" src="https://github.com/user-attachments/assets/4debe14a-6fb6-4b79-b712-a7c04ee3a9da" />
 
 
 
